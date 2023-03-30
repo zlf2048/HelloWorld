@@ -8,6 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.helloworld.recyclerview.RecyclerViewActivity;
+import com.example.helloworld.recyclerview.WebViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnCheckBox;
     private Button mBtnImageView;
     private Button mBtnRv;
+    private Button mBtnWebView;
 
     public MainActivity(Button mBtnTextView) {this.mBtnTextView = mBtnTextView;}
     public MainActivity() {}
@@ -87,6 +89,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //跳转到RecyclerView演示界面
                 Intent intent =new Intent(MainActivity.this, RecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnWebView=findViewById(R.id.btn_webview);
+        mBtnWebView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //跳转到WebView演示界面
+                Intent intent =new Intent(MainActivity.this, WebViewActivity.class);
                 startActivity(intent);
             }
         });
