@@ -8,18 +8,20 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.helloworld.recyclerview.RecyclerViewActivity;
+import com.example.helloworld.recyclerview.ToastActivity;
 import com.example.helloworld.recyclerview.WebViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button mBtnTextView;//声明控件
-    private Button mBtnButton;//声明控件
+    private Button mBtnButton;
     private Button mBtnEditText;
     private Button mBtnRadioButton;
     private Button mBtnCheckBox;
     private Button mBtnImageView;
     private Button mBtnRv;
     private Button mBtnWebView;
+    private Button mBtnToast;
 
     public MainActivity(Button mBtnTextView) {this.mBtnTextView = mBtnTextView;}
     public MainActivity() {}
@@ -28,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);//选中activity_main，长按ctrl+鼠标左键进入
-        //声明控件
         Button mBtnTextView = findViewById(R.id.btn_textview);
         mBtnTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,6 +99,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //跳转到WebView演示界面
                 Intent intent =new Intent(MainActivity.this, WebViewActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnToast=findViewById(R.id.btn_Toast);
+        mBtnToast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //跳转到Toast演示界面
+                Intent intent =new Intent(MainActivity.this, ToastActivity.class);
                 startActivity(intent);
             }
         });

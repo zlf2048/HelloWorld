@@ -49,10 +49,11 @@ public class WebViewActivity extends AppCompatActivity {
         }
     }
 
+    //返回到上一级目录，不返回到MainActivity
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if(keyCode == keyEvent.KEYCODE_BACK && mWvMain.canGoBack()){
-            mWvMain.canGoBack();
+        if(keyCode == KeyEvent.KEYCODE_BACK && mWvMain.canGoBack()){
+            mWvMain.goBack();
             return true;
         }
         return super.onKeyDown(keyCode, event);
