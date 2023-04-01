@@ -21,10 +21,10 @@
         android:layout_marginTop="10dp"/>
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_enter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="login"
+        android:text="enter"
         android:textAllCaps="false"
         android:layout_marginTop="10dp"/>
 

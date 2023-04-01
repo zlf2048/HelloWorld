@@ -108,8 +108,8 @@ public class DialogActivity extends AppCompatActivity {
 //                    View view = LayoutInflater.from(DialogActivity.this).inflate(R.layout.layout_dialog,null);
 //                    EditText etUserName =findViewById(R.id.et_username);
 //                    EditText etPassWord =findViewById(R.id.et_password);
-//                    Button btnLogin = findViewById(R.id.btn_login);
-//                    btnLogin.setOnClickListener(new View.OnClickListener() {
+//                    Button btnEnter = findViewById(R.id.btn_enter);
+//                    btnEnter.setOnClickListener(new View.OnClickListener() {
 //                        @Override
 //                        public void onClick(View view) {
 //                        }
