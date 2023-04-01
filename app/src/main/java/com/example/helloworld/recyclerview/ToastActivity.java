@@ -41,3 +41,4 @@ public class ToastActivity extends AppCompatActivity {
         }
     }
 }
+//健康、发财、幸福快乐
