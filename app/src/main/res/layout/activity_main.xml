@@ -1,74 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <Button
+        android:id="@+id/btn_ui"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:text="UI"
+        android:textAllCaps="false"/>
 
-        <Button
-            android:id="@+id/btn_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"/>
 
-        <Button
-            android:id="@+id/btn_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button"/>
-
-        <Button
-            android:id="@+id/btn_edittext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="EditText"
-            android:textAllCaps="false"/><!--会默认显示大小写-->
-
-        <Button
-            android:id="@+id/btn_radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="RadioButton"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_CheckBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CheckBox"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_imageview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ImagineView"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="RecyclerView"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_WebView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="WebView"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_Toast"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Toast"
-            android:textAllCaps="false"/>
-
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>
