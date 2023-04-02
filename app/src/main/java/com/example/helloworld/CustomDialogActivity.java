@@ -25,12 +25,12 @@ public class CustomDialogActivity extends AppCompatActivity {
                 .setCancel("取消", new CustomDialog.IOnCancelListener() {
                     @Override
                     public void onCancel(CustomDialog dialog) {
-
+                        System.out.println("取消");
                     }
                 }).setConfirm("确认", new CustomDialog.IOnConfirmListener() {
                     @Override
                     public void onConfirm(CustomDialog dialog) {
-
+                        System.out.println("确认");
                     }
                 }).show();
             }

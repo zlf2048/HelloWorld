@@ -76,6 +76,26 @@
             android:text="Dialog"
             android:textAllCaps="false"/>
 
+        <Button
+            android:id="@+id/btn_custom_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义Dialog"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_PopupWindow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PopupWindow"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_jump"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jump"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
 

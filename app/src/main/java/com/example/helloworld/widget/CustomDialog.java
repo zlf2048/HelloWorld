@@ -2,9 +2,12 @@ package com.example.helloworld.widget;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -53,6 +56,15 @@ public class CustomDialog extends Dialog implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_custom_dialog);
+        //设置宽度
+        WindowManager m = getWindow().getWindowManager();
+        Display d = m.getDefaultDisplay();
+        WindowManager.LayoutParams p = getWindow().getAttributes();
+        Point size = new Point();
+        d.getSize(size);
+        p.width = (int)(size.x * 0.8);//设置dialog的宽度为当前手机屏幕的宽度
+        getWindow().setAttributes(p);
+
         mTvTitle = findViewById(R.id.tv_title);
         mTvMessage = findViewById(R.id.tv_message);
         mTvCancel = findViewById(R.id.tv_cancel);
@@ -80,11 +92,13 @@ public class CustomDialog extends Dialog implements View.OnClickListener {
                 if(cancelListener != null){
                     cancelListener.onCancel(this);
                 }
+                dismiss();
                 break;
             case R.id.tv_confirm:
                 if(confirmListener != null){
                     confirmListener.onConfirm(this);
                 }
+                dismiss();
                 break;
         }
     }

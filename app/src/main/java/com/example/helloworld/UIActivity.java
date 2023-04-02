@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.helloworld.jump.AActivity;
 import com.example.helloworld.recyclerview.DialogActivity;
 import com.example.helloworld.recyclerview.RecyclerViewActivity;
 import com.example.helloworld.recyclerview.ToastActivity;
@@ -24,6 +25,9 @@ public class UIActivity extends AppCompatActivity {
     private Button mBtnWebView;
     private Button mBtnToast;
     private Button mBtnDialog;
+    private Button mBtnCustomDialog;
+    private Button mBtnPopupWindow;
+    private Button mBtnJump;
 
     public UIActivity(Button mBtnTextView) {this.mBtnTextView = mBtnTextView;}
     public UIActivity() {}
@@ -119,6 +123,33 @@ public class UIActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //跳转到Dialog演示界面
                 Intent intent =new Intent(UIActivity.this, DialogActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnCustomDialog=findViewById(R.id.btn_custom_dialog);
+        mBtnCustomDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //跳转到CustomDialog演示界面
+                Intent intent =new Intent(UIActivity.this, CustomDialogActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnPopupWindow = findViewById(R.id.btn_PopupWindow);
+        mBtnPopupWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //跳转到PopupWindow演示界面
+                Intent intent =new Intent(UIActivity.this, PopupWindowActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnJump = findViewById(R.id.btn_jump);
+        mBtnJump.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //由UIActivity界面跳转到AActivity演示界面
+                Intent intent =new Intent(UIActivity.this, AActivity.class);
                 startActivity(intent);
             }
         });
